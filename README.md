@@ -1,1 +1,1 @@
-# Cursore_animation
+# Шаблон 

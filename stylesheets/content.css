@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: rgb(255, 240, 243);
+}
+
+@font-face {
+    font-family: "CarlaSansLight";
+    src: url("../fonts/CarlaSansLight.ttf") format("truetype");
+    font-style: Light;
+    font-weight: Light;
+}
+
+p {
+    font-family: 'CarlaSansLight';
+}
+
+.mousein {
+    width: 30%;
+    height: 500px;
+    background: #FFFDF8;
+    transition: transform 0.5s, background-color 0.3s;
+    border: 1px solid #FECD2D;
+    margin: 2% 10%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.mousein:hover {
+    background: #FECD2D;
+    cursor: pointer;
+}
+
+
+
+.follow-cursor {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: #FECD2D;
+    border: 1px solid #fbe9ab;
+    border-radius: 50%;
+    animation: change 1s ease-in-out infinite;
+    transform: translateY(-50%) translateX(-50%); /* центрируем кружок */
+    position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
+    z-index: 999; /* чтобы элемент был над остальными элементами */
+    pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
+    transition: width 0.64s, height 0.64s, border-radius 0.64s, background 0.64s;
+}
+
+@keyframes change {
+    0% { background: #FECD2D; };
+    50% { background: #fff5d2; };
+    100% { background: #FECD2D; };
+}
+
+@media (max-width: 991.98px) {
+    .follow-cursor {
+    display: none;
+    }
+}
+
+.enlarge {
+    transform: scale(1.2) translateY(-70%) translateX(-70%);
+}
+
