@@ -37,6 +37,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// $(document).ready(function() {
+
+//     const followCursor = () => { 
+//         const el = $('.follow-cursor'); 
+
+//         $(window).on('mousemove', function(e) { 
+//             const target = $(e.target); 
+//             if (!target) return;
+
+//             if (target.closest('a').length) { 
+//                 el.addClass('follow-cursor_active'); 
+//             } else { 
+//                 el.removeClass('follow-cursor_active'); 
+//             }
+
+//             el.css({
+//                 left: e.pageX + 'px',
+//                 top: e.pageY + 'px'
+//             });
+//         });
+//     };
+
+//     let mouseinElements = $('.mousein');
+//     let fosor = $('.follow-cursor');
+
+//     mouseinElements.on('mouseenter', function() {
+//         fosor.addClass('enlarge');
+//     });
+
+//     mouseinElements.on('mouseleave', function() {
+//         fosor.removeClass('enlarge');
+//     });
+
+//     followCursor();
+// });
+
+
 
 
 
